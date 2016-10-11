@@ -1,0 +1,41 @@
+/* Generic Image CSS */
+.img-responsive{
+    width: 100%;
+}
+/*Blog Detail CSS*/
+.article-header{
+    position: relative;
+}
+.article-header .bg-img{
+    z-index: 1;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+.article-header .title-box{
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+}
+.article-header .title-box h1{
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+}
+.article-header .title-box .date{
+    padding-left: 15px;
+    font-style: italic;
+}

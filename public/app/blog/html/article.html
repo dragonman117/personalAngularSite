@@ -1,0 +1,12 @@
+<div class="article-header">
+    <div class="bg-img" [ngStyle]="{'background-image': 'url(' + article.imgUrl + ')'}"></div>
+    <div class="title-box">
+        <h1>{{article.title}}</h1>
+        <div class="date">~ {{article.date|date}}</div>
+    </div>
+</div>
+<div class="body mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone"></div>
+    <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-phone" [innerHTML]="article.body"></div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone"></div>
+</div>

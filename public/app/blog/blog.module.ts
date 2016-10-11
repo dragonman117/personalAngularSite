@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MdlModule } from 'angular2-mdl';
 
 import { Blog } from './blog.component';
-import { blogRouting } from './blog.routing'
+import { BlogDetail } from './blog.detail.component';
+import { blogRouting } from './blog.routing';
+import { BlogService } from './services/blog.service';
 
 
 @NgModule({
@@ -13,8 +15,11 @@ import { blogRouting } from './blog.routing'
         blogRouting
     ],
     declarations: [
-        Blog
+        Blog,
+        BlogDetail
     ],
-    providers: []
+    providers: [
+        BlogService
+    ]
 })
 export class BlogModule {}

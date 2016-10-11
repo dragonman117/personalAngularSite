@@ -16,12 +16,19 @@ var app_home_component_1 = require('./app.home.component');
 var app_route_1 = require('./app.route');
 /* Feature Modules */
 var blog_module_1 = require('./blog/blog.module');
+var contact_module_1 = require('./contact/contact.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, blog_module_1.BlogModule, angular2_mdl_1.MdlModule, app_route_1.routing],
+            imports: [
+                platform_browser_1.BrowserModule,
+                contact_module_1.ContactModule,
+                blog_module_1.BlogModule,
+                angular2_mdl_1.MdlModule,
+                app_route_1.routing
+            ],
             declarations: [app_component_1.AppComponent, app_home_component_1.Home],
             bootstrap: [app_component_1.AppComponent]
         }), 

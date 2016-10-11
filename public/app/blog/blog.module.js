@@ -12,7 +12,9 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var angular2_mdl_1 = require('angular2-mdl');
 var blog_component_1 = require('./blog.component');
+var blog_detail_component_1 = require('./blog.detail.component');
 var blog_routing_1 = require('./blog.routing');
+var blog_service_1 = require('./services/blog.service');
 var BlogModule = (function () {
     function BlogModule() {
     }
@@ -24,9 +26,12 @@ var BlogModule = (function () {
                 blog_routing_1.blogRouting
             ],
             declarations: [
-                blog_component_1.Blog
+                blog_component_1.Blog,
+                blog_detail_component_1.BlogDetail
             ],
-            providers: []
+            providers: [
+                blog_service_1.BlogService
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], BlogModule);

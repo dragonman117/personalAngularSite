@@ -9,9 +9,16 @@ import { routing } from './app.route';
 
 /* Feature Modules */
 import { BlogModule } from './blog/blog.module';
+import { ContactModule } from './contact/contact.module'
 
 @NgModule({
-    imports:      [ BrowserModule, BlogModule, MdlModule, routing ],
+    imports: [
+        BrowserModule,
+        ContactModule,
+        BlogModule,
+        MdlModule,
+        routing
+    ],
     declarations: [ AppComponent, Home ],
     bootstrap:    [ AppComponent ]
 })

@@ -4,8 +4,7 @@ var app_home_component_1 = require('./app.home.component');
 var appRoutes = [
     {
         path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
+        component: app_home_component_1.Home
     },
     {
         path: 'home',

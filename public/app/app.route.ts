@@ -7,8 +7,7 @@ import { Home } from './app.home.component';
 const appRoutes: Routes = [
     {
         path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
+        component: Home
     },
     {
         path: 'home',

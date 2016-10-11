@@ -10,15 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Home = (function () {
-    function Home() {
+    function Home(ngZone) {
+        var _this = this;
+        window.onresize = function (e) {
+            ngZone.run(function () {
+                _this.height = window.innerHeight - 64;
+            });
+        };
     }
+    Home.prototype.ngOnInit = function () {
+        //Set initial
+        this.height = window.innerHeight - 64;
+    };
     Home = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'home',
-            templateUrl: 'html/home.html'
+            templateUrl: 'html/home.html',
+            styleUrls: ['css/home.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_1.NgZone])
     ], Home);
     return Home;
 }());
