@@ -4,13 +4,16 @@ import { MdlModule } from 'angular2-mdl';
 
 import { Contact } from './contact.component';
 import { contactRouting } from './contact.routing'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
     imports: [
         CommonModule,
         MdlModule,
-        contactRouting
+        contactRouting,
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         Contact

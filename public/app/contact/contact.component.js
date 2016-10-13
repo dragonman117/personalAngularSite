@@ -9,9 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require("@angular/forms");
+var emailValidator = forms_1.Validators.pattern('^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$');
 var Contact = (function () {
-    function Contact() {
+    function Contact(fb) {
+        this.fb = fb;
+        this.name = new forms_1.FormControl('', forms_1.Validators.required);
+        this.subject = new forms_1.FormControl('', forms_1.Validators.required);
+        this.email = new forms_1.FormControl('', emailValidator);
+        this.message = new forms_1.FormControl('', forms_1.Validators.required);
+        this.form = fb.group({
+            'name': this.name,
+            'subject': this.subject,
+            'email': this.email,
+            'message': this.message,
+        });
     }
+    Contact.prototype.onSubmit = function () {
+        console.log(this.form.value);
+        this.form.reset();
+    };
     Contact = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -19,7 +36,7 @@ var Contact = (function () {
             templateUrl: 'html/home.html',
             styleUrls: ['css/blog.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], Contact);
     return Contact;
 }());

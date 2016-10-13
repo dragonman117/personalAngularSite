@@ -1,0 +1,30 @@
+<div class="body mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone"></div>
+    <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-phone">
+        <h1>Contact Me</h1>
+        <p>
+            Please Note that all fields are required before you can send your email.
+        </p>
+        <form [formGroup]="form">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--5-col mdl-cell--10-col-phone">
+                    <mdl-textfield label="Name" type="text" formControlName="name" floating-label></mdl-textfield>
+                </div>
+                <div class="mdl-cell mdl-cell--5-col mdl-cell--10-col-phone">
+                    <mdl-textfield label="Subject" type="text" formControlName="subject" floating-label></mdl-textfield>
+                </div>
+                <div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-phone">
+                    <mdl-textfield label="Your E-Mail" type="text" formControlName="email" floating-label style="width:100%;"></mdl-textfield>
+                </div>
+                <div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-phone">
+                    <mdl-textfield type="text" label="Message" formControlName="message" rows="5" maxrows="15" floating-label style="width:100%;"></mdl-textfield>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--8-col-phone"></div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">
+                    <button mdl-button (click)="onSubmit()" [disabled]="!form.valid" mdl-button-type="raised" mdl-ripple mdl-colored="primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone"></div>
+</div>

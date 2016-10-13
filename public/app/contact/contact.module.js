@@ -13,6 +13,7 @@ var common_1 = require('@angular/common');
 var angular2_mdl_1 = require('angular2-mdl');
 var contact_component_1 = require('./contact.component');
 var contact_routing_1 = require('./contact.routing');
+var forms_1 = require('@angular/forms');
 var ContactModule = (function () {
     function ContactModule() {
     }
@@ -21,7 +22,9 @@ var ContactModule = (function () {
             imports: [
                 common_1.CommonModule,
                 angular2_mdl_1.MdlModule,
-                contact_routing_1.contactRouting
+                contact_routing_1.contactRouting,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule
             ],
             declarations: [
                 contact_component_1.Contact
