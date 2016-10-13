@@ -1,0 +1,19 @@
+/*Main Segment css*/
+.main-segment{
+    position:relative;
+}
+
+.main-segment .bg-img{
+    background: url('/img/blosoms.png');
+}
+.floating-box{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 20%;
+    right: 10%;
+    padding: 40px;
+}
+.floating-box h1{
+    pading: 0px;
+    margin: 0px;
+}

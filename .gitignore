@@ -88,6 +88,5 @@ jspm_packages
 .gitignore
 .idea/
 node_modules/
-public/app/css/
 public/node_modules/
 public/typings/
